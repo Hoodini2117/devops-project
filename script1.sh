@@ -2,8 +2,8 @@
 
 # Environment Variables
 THRESHOLD=80
-EMAIL="admin@example.com"
-PROCESS_NAME="your_process"
+EMAIL="ayaan171104@gmail.com"
+PROCESS_NAME="apache2"
 RESTART_COMMAND="/path/to/start_process.sh"
 
 # Log File
