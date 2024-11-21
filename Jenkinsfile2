@@ -1,13 +1,13 @@
 pipeline {
     agent any
 
-    environment 
+    environment {
         SOURCE_DIR = "/home/hoodini/project" 
         DEST_DIR = "/home/hoodini/project-1"
         COMPRESS_FLAG = "--compress"
         SCRIPT_NAME = "script2.sh" 
         LOG_FILE = "/var/log/script2.log"
-    
+    }
 
     stages {
         stage('Checkout Code') {
