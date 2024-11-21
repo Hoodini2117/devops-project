@@ -1,0 +1,71 @@
+pipeline {
+    agent any
+
+    environment {
+        SOURCE_DIR = "/Hoodini/Home/Documents" 
+        DEST_DIR = "/Hoodini/Home?downloads"
+        COMPRESS_FLAG = "--compress"
+        SCRIPT_NAME = "script2.sh" 
+        LOG_FILE = "/var/log/backup_script.log"
+    }
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                // Checkout the latest code from the repository if the script is in version control
+                checkout scm
+            }
+        }
+
+        stage('Prepare Backup Script') {
+            steps {
+                script {
+                    // Ensure the backup script is executable
+                    sh '''
+                    chmod +x ${WORKSPACE}/${SCRIPT_NAME}
+                    '''
+                }
+            }
+        }
+
+        stage('Execute Backup Script') {
+            steps {
+                script {
+                    // Run the backup script with required arguments
+                    sh '''
+                    ${WORKSPACE}/${SCRIPT_NAME} ${SOURCE_DIR} ${DEST_DIR} ${COMPRESS_FLAG}
+                    '''
+                }
+            }
+        }
+
+        stage('Verify Backup and Logs') {
+            steps {
+                script {
+                    // Check if logs and backup were created
+                    sh '''
+                    if [ -f "${LOG_FILE}" ]; then
+                        echo "Log file exists: ${LOG_FILE}"
+                        tail -n 10 "${LOG_FILE}"
+                    else
+                        echo "Log file does not exist. Backup may have failed."
+                        exit 1
+                    fi
+                    '''
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo "Pipeline execution completed."
+        }
+        success {
+            echo "Backup completed successfully!"
+        }
+        failure {
+            echo "Backup failed. Check the logs for details."
+        }
+    }
+}
