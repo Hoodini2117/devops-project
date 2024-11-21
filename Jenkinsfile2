@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         SOURCE_DIR = "/home/hoodini/Documents" 
-        DEST_DIR = "/home/hoodini/downloads"
+        DEST_DIR = "/home/hoodini/Downloads"
         COMPRESS_FLAG = "--compress"
         SCRIPT_NAME = "script2.sh" 
         LOG_FILE = "/var/log/script2.log"
