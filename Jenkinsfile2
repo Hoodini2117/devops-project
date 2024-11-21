@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        SOURCE_DIR = "/Home/Documents" 
-        DEST_DIR = "/Home/downloads"
+        SOURCE_DIR = "/home/hoodini/Documents" 
+        DEST_DIR = "/home/hoodini/downloads"
         COMPRESS_FLAG = "--compress"
         SCRIPT_NAME = "script2.sh" 
         LOG_FILE = "/var/log/script2.log"
