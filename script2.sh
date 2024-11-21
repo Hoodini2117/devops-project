@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOG_FILE="/var/log/backup_script.log"
+LOG_FILE="/var/log/script2.log"
 
 log_message() {
     echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" | tee -a "$LOG_FILE"
