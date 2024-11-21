@@ -4,7 +4,7 @@
 THRESHOLD=80
 EMAIL="ayaan171104@gmail.com"
 PROCESS_NAME="apache2"
-RESTART_COMMAND="/path/to/start_process.sh"
+RESTART_COMMAND="sudo systemctl restart apache2"
 
 # Log File
 LOG_FILE="/var/log/script1.log"
