@@ -31,7 +31,6 @@ pipeline {
         stage('Execute Backup Script') {
             steps {
                 script {
-                    // Run the backup script with required arguments
                     sh '''
                     ${WORKSPACE}/${SCRIPT_NAME} ${SOURCE_DIR} ${DEST_DIR} ${COMPRESS_FLAG}
                     '''
@@ -42,7 +41,6 @@ pipeline {
         stage('Verify Backup and Logs') {
             steps {
                 script {
-                    // Check if logs and backup were created
                     sh '''
                     if [ -f "${LOG_FILE}" ]; then
                         echo "Log file exists: ${LOG_FILE}"
