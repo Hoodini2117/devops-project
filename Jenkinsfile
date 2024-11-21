@@ -2,23 +2,21 @@ pipeline {
     agent any
 
     environment {
-        ALERT_EMAIL = "admin@example.com"      // Email for disk alerts
-        PROCESS_NAME = "apache2"              // Apache process name
-        RESTART_COMMAND = "sudo systemctl restart apache2" // Command to restart Apache
-        DISK_THRESHOLD = 80                   // Disk usage threshold
+        ALERT_EMAIL = "ayaan171104@gmail.com"      
+        PROCESS_NAME = "apache2"              
+        RESTART_COMMAND = "sudo systemctl restart apache2" 
+        DISK_THRESHOLD = 80                   
     }
 
     stages {
         stage('Checkout Code') {
             steps {
-                // Pull the latest code from the Git repository
                 checkout scm
             }
         }
 
         stage('Execute Shell Script') {
             steps {
-                // Run the shell script `script1.sh` from the `devops-project` repository
                 sh '''
                 # Make sure the script is executable and run it
                 chmod +x ./script1.sh
@@ -29,7 +27,6 @@ pipeline {
 
         stage('Monitor Disk Utilization') {
             steps {
-                // Monitor disk utilization and send email if usage > 80%
                 sh '''
                 #!/bin/bash
 
@@ -46,7 +43,6 @@ pipeline {
 
         stage('Apache Process Management') {
             steps {
-                // Ensure Apache is running and restart if necessary
                 sh '''
                 #!/bin/bash
 
