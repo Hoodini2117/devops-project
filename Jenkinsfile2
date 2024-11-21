@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        SOURCE_DIR = "/Hoodini/Home/Documents" 
-        DEST_DIR = "/Hoodini/Home?downloads"
+        SOURCE_DIR = "/Home/Documents" 
+        DEST_DIR = "/Home/downloads"
         COMPRESS_FLAG = "--compress"
         SCRIPT_NAME = "script2.sh" 
         LOG_FILE = "/var/log/backup_script.log"
