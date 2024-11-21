@@ -12,7 +12,6 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                // Checkout the latest code from the repository if the script is in version control
                 checkout scm
             }
         }
@@ -20,7 +19,6 @@ pipeline {
         stage('Prepare Backup Script') {
             steps {
                 script {
-                    // Ensure the backup script is executable
                     sh '''
                     chmod +x ${WORKSPACE}/${SCRIPT_NAME}
                     '''
