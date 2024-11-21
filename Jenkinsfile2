@@ -6,7 +6,7 @@ pipeline {
         DEST_DIR = "/Home/downloads"
         COMPRESS_FLAG = "--compress"
         SCRIPT_NAME = "script2.sh" 
-        LOG_FILE = "/var/log/backup_script.log"
+        LOG_FILE = "/var/log/script2.log"
     }
 
     stages {
