@@ -7,7 +7,7 @@ pipeline {
         RESTART_COMMAND = "sudo systemctl restart apache2" 
         DISK_THRESHOLD = 80                   
     }
-    trigger{
+    triggers{
         cron('H * * * *')
     }
     stages {
