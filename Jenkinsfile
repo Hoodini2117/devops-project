@@ -28,7 +28,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                        chmod +x scipt1_2.sh
+                        chmod +x script1_2.sh
                         ./script1_2.sh
                     '''
                 }
