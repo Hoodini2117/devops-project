@@ -17,8 +17,8 @@ pipeline {
             steps {
                 script {
                     sh '''
-                        chmod +x devops-project/script1.sh
-                        ./devops-project/script1.sh
+                        chmod +x script1.sh
+                        ./script1.sh
                     '''
                 }
             }
@@ -28,8 +28,8 @@ pipeline {
             steps {
                 script {
                     sh '''
-                        chmod +x devops-project/scipt1_2.sh
-                        ./devops-project/script1_2.sh
+                        chmod +x scipt1_2.sh
+                        ./script1_2.sh
                     '''
                 }
             }
@@ -45,7 +45,7 @@ pipeline {
                     Check console output at '${env.BUILD_URL}'
                     """,
                 to: 'ayaan171104@gmail.com',
-                from: 'jenkins@syndrizzle.me'
+                from: 'jenkins@mail'
             )
         }
     }
