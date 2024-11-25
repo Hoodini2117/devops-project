@@ -17,8 +17,8 @@ pipeline {
             steps {
                 script {
                     sh '''
-                        chmod +x example-script-pipeline/examples/disk_check.sh
-                        ./example-script-pipeline/examples/disk_check.sh
+                        chmod +x devops-project/script1.sh
+                        ./devops-project/script1.sh
                     '''
                 }
             }
@@ -28,8 +28,8 @@ pipeline {
             steps {
                 script {
                     sh '''
-                        chmod +x example-script-pipeline/examples/process_monitor.sh
-                        ./example-script-pipeline/examples/process_monitor.sh
+                        chmod +x devops-project/scipt1_2.sh
+                        ./devops-project/script1_2.sh
                     '''
                 }
             }
@@ -44,7 +44,7 @@ pipeline {
                     FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':
                     Check console output at '${env.BUILD_URL}'
                     """,
-                to: 'sahilnihalani0@gmail.com',
+                to: 'ayaan171104@gmail.com',
                 from: 'jenkins@syndrizzle.me'
             )
         }
