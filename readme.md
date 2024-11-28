@@ -35,7 +35,7 @@ This script checks the memory consumption from the (/) folder files. If the usag
 
 
 
-This groovy script checks the source code from github repo (devops-project) . It reads script 1 and script 2 for disk usage / process management. If the build fails, a notification is sent to the mail "ayaan171104@gmail.com".
+This groovy script checks the source code from github repo (devops-project) . It reads script 1 and script 2 for disk usage / process management. If the build fails, a notification is sent to the mail "ayaan171104@gmail.com".The cron command is also used to set a timer.
 
 Task 4 : BACKUP PROCESS 
 
@@ -58,3 +58,22 @@ This part of the script checks if the source and the destination passed previous
 The cript will perform a backup of the source dir at the destination dir, It generates a timestamp backup name. If the compress option is used, the dir is backed up in a .tar.gz file using tar . If not used, it copies the source dir to the new dir. Logs are updated at each step whether success or failure. There is also a cleanup fucntion that will remove any bacup files after 7 days .
 
 
+TASK 5 : BUILDING A JAVA APP
+
+![image](https://github.com/user-attachments/assets/315d8f5a-eb35-43a0-a17d-7c701c8eddae)
+
+![image](https://github.com/user-attachments/assets/9e1480e1-bcbf-4e2b-8754-05219681a36f)
+
+Certain tools have been implemented to build the java app , Such as jdk 17 and Maven 3.9.9 .
+
+
+![image](https://github.com/user-attachments/assets/0962fda6-b489-4979-9471-67f18608d7f5)
+
+This pipeline is used to buid test and deliver a project using maven and java. Pipeline is triggered with githubPush() and it includes parameters.The code is checked out from the repository https://github.com/Syndrizzle/devops-stuff.git and main branch is used by default.
+mvn clean package -DskipTests this command compiles the code and packages it into a .jar file. After building successfully a deliver.sh script is used to deploy the app.
+
+![image](https://github.com/user-attachments/assets/cec7950a-6aa8-4cbe-8c96-27c246b40b7d)
+
+
+
+ 
