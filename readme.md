@@ -32,3 +32,29 @@ This script checks the memory consumption from the (/) folder files. If the usag
 
 
 ![image](https://github.com/user-attachments/assets/a1930af2-22e8-4526-a88c-b5b1ef7b72e9)
+
+
+
+This groovy script checks the source code from github repo (devops-project) . It reads script 1 and script 2 for disk usage / process management. If the build fails, a notification is sent to the mail "ayaan171104@gmail.com".
+
+Task 4 : BACKUP PROCESS 
+
+![image](https://github.com/user-attachments/assets/0ca76d3d-a325-4119-be10-4765d2749c4a)
+
+
+Script passes command-line arguments to set a source "-s" and a destination "-d" directories with an option of compression "-c" . A log funtion is created to store log the timestamps or tracking. If the mandatory requirements are not met it exits with a message.
+
+
+
+![image](https://github.com/user-attachments/assets/7dfcb117-ae15-4636-a197-96cc0b49ee1e)
+
+
+This part of the script checks if the source and the destination passed previously, exists or not. If it exists, the cript will continue naturally and if it does not exist, a new directory will be made. If it further fails while creating a directory it will show an error message and exit while upodating the log.
+
+
+![image](https://github.com/user-attachments/assets/491d417a-02a6-443e-80e5-585473e758a5)
+
+
+The cript will perform a backup of the source dir at the destination dir, It generates a timestamp backup name. If the compress option is used, the dir is backed up in a .tar.gz file using tar . If not used, it copies the source dir to the new dir. Logs are updated at each step whether success or failure. There is also a cleanup fucntion that will remove any bacup files after 7 days .
+
+
