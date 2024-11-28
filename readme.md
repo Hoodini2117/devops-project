@@ -1,11 +1,35 @@
-TASK 2 : ROLL BASED AUTHENTICATION
+TASK 1 : INSTALL JENKINS
+
+
+![image](https://github.com/user-attachments/assets/0fcd1ce5-5cd1-4269-90a9-d874a7bb2885)
+
+
+
+This script contains two functions, install_java and install_jenkins, which help install Java 17 and Jenkins on different operating systems.
+function 1 - install_java: This function checks your operating system (Debian/Ubuntu, RHEL/Fedora/Centos, or macOS) and installs Java 17 using the correct package manager (like apt, yum, or brew).
+funtion 2 - install_jenkins: This function installs the latest LTS version of Jenkins. It adds the Jenkins repository and key for Debian-based systems, or uses yum for RHEL-based systems, and installs it. For macOS, it uses brew to install Jenkins.
+
+
+TASK 2 : MASTER SLAVE ARCHITECTURE
+
+![image](https://github.com/user-attachments/assets/728b6fb1-0335-42f6-854d-f9b99b93d743)
+
+create a node to setup master slave architecure using private key of the slave and host information, this architecture can run 5 different tasks as per the needs of the user.
+
+
+![image](https://github.com/user-attachments/assets/8dca4e30-304f-4e8d-9462-78a08c41c6b3)
+
+
+
+
+TASK 3 : ROLL BASED AUTHENTICATION
 
 ![Screenshot from 2024-11-28 22-44-18](https://github.com/user-attachments/assets/8b1543d5-6a87-4192-b527-af932da8608a)
 
 6 users were added with the names as :
 devops 1 / devops 2
 developer 1 / developer 2 
-testing 1 / testing 2
+testing 1 / testing 2 
 
 The developer / devops / test roles have been created and they are given their respective authorisations. 2 global roles have been added as global admin / global reader to give everyone read permissions.
 
@@ -19,7 +43,7 @@ Global reader has been given to all the roles and global admin has been give to 
 ![Screenshot from 2024-11-28 22-54-57](https://github.com/user-attachments/assets/1db455fa-7776-4edc-93c8-3729d4224c43)
 
 
-TASK 3 : PIPELINE FOR DISK USAGE AUR PROCESS MANAGEMENT
+TASK 4 : PIPELINE FOR DISK USAGE AUR PROCESS MANAGEMENT
 
 ![image](https://github.com/user-attachments/assets/a4f177e4-3ad3-4193-83ca-86e62f6a7269)
 
@@ -37,7 +61,7 @@ This script checks the memory consumption from the (/) folder files. If the usag
 
 This groovy script checks the source code from github repo (devops-project) . It reads script 1 and script 2 for disk usage / process management. If the build fails, a notification is sent to the mail "ayaan171104@gmail.com".The cron command is also used to set a timer.
 
-Task 4 : BACKUP PROCESS 
+Task 5 : BACKUP PROCESS 
 
 ![image](https://github.com/user-attachments/assets/0ca76d3d-a325-4119-be10-4765d2749c4a)
 
@@ -58,7 +82,7 @@ This part of the script checks if the source and the destination passed previous
 The cript will perform a backup of the source dir at the destination dir, It generates a timestamp backup name. If the compress option is used, the dir is backed up in a .tar.gz file using tar . If not used, it copies the source dir to the new dir. Logs are updated at each step whether success or failure. There is also a cleanup fucntion that will remove any bacup files after 7 days .
 
 
-TASK 5 : BUILDING A JAVA APP
+TASK 6 : BUILDING A JAVA APP
 
 ![image](https://github.com/user-attachments/assets/315d8f5a-eb35-43a0-a17d-7c701c8eddae)
 
