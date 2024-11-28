@@ -29,3 +29,6 @@ This script identifies the top 10 resource intensive CPU and memory processes an
 
 This script checks the memory consumption from the (/) folder files. If the usage is above 80% then it will print a warning other wise it will show normal usage.
 
+
+
+![image](https://github.com/user-attachments/assets/a1930af2-22e8-4526-a88c-b5b1ef7b72e9)
